@@ -13,3 +13,5 @@ pom.xml.asc
 *.log
 /.env
 /.sass-cache
+/*.iml
+/.rebel_readline_history

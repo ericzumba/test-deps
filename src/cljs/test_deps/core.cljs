@@ -4,7 +4,8 @@
    [reagent.session :as session]
    [reitit.frontend :as reitit]
    [clerk.core :as clerk]
-   [accountant.core :as accountant]))
+   [accountant.core :as accountant]
+   [cljsjs.moment]))
 
 ;; -------------------------
 ;; Routes
@@ -29,7 +30,7 @@
 (defn home-page []
   (fn []
     [:span.main
-     [:h1 "Welcome to test-deps"]
+     [:h1 (str "Welcome to test-deps" (js/moment.locale))]
      [:ul
       [:li [:a {:href (path-for :items)} "Items of test-deps"]]
       [:li [:a {:href "/broken/link"} "Broken link"]]]]))
